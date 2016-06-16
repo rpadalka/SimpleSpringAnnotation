@@ -1,4 +1,4 @@
-package quoters;
+package quoters.profiling;
 
 /**
  * Created by rpadalka on 29.05.16.

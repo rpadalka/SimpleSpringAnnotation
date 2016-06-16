@@ -1,5 +1,8 @@
 package quoters;
 
+import quoters.annotation.InjectRandomInt;
+import quoters.annotation.Profiling;
+
 import javax.annotation.PostConstruct;
 
 /**

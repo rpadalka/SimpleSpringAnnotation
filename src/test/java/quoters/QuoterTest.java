@@ -4,7 +4,6 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import sample.AppTest;
 
 /**
  * Created by rpadalka on 29.05.16.
@@ -25,7 +24,7 @@ public class QuoterTest extends TestCase {
      */
     public static Test suite()
     {
-        return new TestSuite( AppTest.class );
+        return new TestSuite( QuoterTest.class );
     }
 
     /**

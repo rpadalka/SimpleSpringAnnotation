@@ -11,4 +11,14 @@ public class Main {
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("context.xml");
         applicationContext.getBean(Quoter.class).sayQuote();
     }
+
+    /*public static void main(String[] args) throws InterruptedException {
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("context.xml");
+
+        while (true) {
+            Thread.sleep(100);
+
+            applicationContext.getBean(Quoter.class).sayQuote();
+        }
+    }*/
 }

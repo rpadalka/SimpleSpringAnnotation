@@ -1,7 +1,9 @@
-package quoters;
+package quoters.postprocessor;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
+import quoters.profiling.ProfilingController;
+import quoters.annotation.Profiling;
 
 import javax.management.MBeanServer;
 import javax.management.ObjectName;

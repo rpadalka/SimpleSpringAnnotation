@@ -1,4 +1,4 @@
-package quoters;
+package quoters.annotation;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -8,7 +8,5 @@ import java.lang.annotation.RetentionPolicy;
  */
 
 @Retention(RetentionPolicy.RUNTIME)
-@interface InjectRandomInt {
-    int min();
-    int max();
+public @interface Profiling {
 }
