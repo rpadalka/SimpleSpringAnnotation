@@ -1,6 +1,7 @@
 package quoters;
 
 import quoters.annotation.InjectRandomInt;
+import quoters.annotation.PostProxy;
 import quoters.annotation.Profiling;
 
 import javax.annotation.PostConstruct;
@@ -35,8 +36,10 @@ public class T800 implements Quoter {
     }
 
     @Override
+    @PostProxy
     public void sayQuote() {
         System.out.println("===============================");
+        System.out.println("Phase 3 " + "repeat = " + repeat);
 
         for (int i = 0; i < repeat; i++) {
             System.out.println("Message = " + message);
