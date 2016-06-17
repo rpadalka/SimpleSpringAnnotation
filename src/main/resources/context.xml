@@ -8,11 +8,12 @@
        http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!--Инициализация Spring PostProcessors-->
-    <!--<context:annotation-config/>-->
-    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
+    <context:annotation-config/>
 
     <bean class="quoters.postprocessor.InjectRandomIntAnnotationBeanPostProcessor"/>
     <bean class="quoters.postprocessor.ProfilingHandlerBeanPostProcessor"/>
+
+    <bean class="quoters.contextlistener.PostProxyInvokerContextListener"/>
 
     <bean class="quoters.T800" id="t800">
         <property name="message" value="I'll be back!"/>

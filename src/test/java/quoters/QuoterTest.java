@@ -8,6 +8,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 /**
  * Created by rpadalka on 29.05.16.
  */
+
+// ToDo write right tests
 public class QuoterTest extends TestCase {
     /**
      * Create the test case

@@ -5,8 +5,7 @@ import org.springframework.beans.factory.config.BeanPostProcessor;
 import quoters.profiling.ProfilingController;
 import quoters.annotation.Profiling;
 
-import javax.management.MBeanServer;
-import javax.management.ObjectName;
+import javax.management.*;
 import java.lang.management.ManagementFactory;
 import java.lang.reflect.Proxy;
 import java.util.HashMap;
@@ -20,7 +19,7 @@ public class ProfilingHandlerBeanPostProcessor implements BeanPostProcessor {
     private Map<String, Class> map = new HashMap<>();
     private ProfilingController controller = new ProfilingController();
 
-    public ProfilingHandlerBeanPostProcessor() throws Exception {
+    public ProfilingHandlerBeanPostProcessor() throws MalformedObjectNameException, NotCompliantMBeanException, InstanceAlreadyExistsException, MBeanRegistrationException {
         MBeanServer platformMBeanServer = ManagementFactory.getPlatformMBeanServer();
         platformMBeanServer.registerMBean(controller, new ObjectName("profiling", "name", "controller"));
     }
