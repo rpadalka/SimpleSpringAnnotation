@@ -1,5 +1,6 @@
 package quoters;
 
+import quoters.annotation.DeprecatedClass;
 import quoters.annotation.InjectRandomInt;
 import quoters.annotation.PostProxy;
 import quoters.annotation.Profiling;
@@ -11,6 +12,7 @@ import javax.annotation.PostConstruct;
  */
 
 @Profiling
+@DeprecatedClass(newImpl = T1000.class)
 public class T800 implements Quoter {
 
     @InjectRandomInt(min = 2, max = 7)

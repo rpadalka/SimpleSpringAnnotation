@@ -12,6 +12,7 @@
 
     <bean class="quoters.postprocessor.InjectRandomIntAnnotationBeanPostProcessor"/>
     <bean class="quoters.postprocessor.ProfilingHandlerBeanPostProcessor"/>
+    <bean class="quoters.postprocessor.DeprecationHandlerBeanFactoryPostProcessor"/>
 
     <bean class="quoters.contextlistener.PostProxyInvokerContextListener"/>
 

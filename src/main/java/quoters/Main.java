@@ -7,14 +7,14 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class Main {
 
-    public static void main(String[] args) {
-        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("context.xml");
-    }
-
     /*public static void main(String[] args) {
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("context.xml");
-        applicationContext.getBean(Quoter.class).sayQuote();
     }*/
+
+    public static void main(String[] args) {
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("context.xml");
+        applicationContext.getBean(Quoter.class).sayQuote();
+    }
 
     /*public static void main(String[] args) throws InterruptedException {
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("context.xml");
