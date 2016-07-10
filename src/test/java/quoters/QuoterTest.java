@@ -9,7 +9,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * Created by rpadalka on 29.05.16.
  */
 
-// ToDo write right tests
 public class QuoterTest extends TestCase {
     /**
      * Create the test case
@@ -29,14 +28,13 @@ public class QuoterTest extends TestCase {
         return new TestSuite( QuoterTest.class );
     }
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
+    public void testApp() throws InterruptedException {
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("context.xml");
-        applicationContext.getBean(T800.class).sayQuote();
+        System.out.println("PostProxy annotation. ContextRefreshedEvent. END\n");
 
-        assertTrue( true );
+        for (int i = 0; i < 10; i++) {
+            Thread.sleep(10000);
+            applicationContext.getBean(Quoter.class).sayQuote();
+        }
     }
 }

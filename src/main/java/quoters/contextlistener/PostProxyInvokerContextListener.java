@@ -34,6 +34,7 @@ public class PostProxyInvokerContextListener implements ApplicationListener<Cont
 
                 for (Method method : methods) {
                     if (method.isAnnotationPresent(PostProxy.class)) {
+                        System.out.println("\nPostProxy annotation. ContextRefreshedEvent. BEGIN");
                         Object bean = applicationContext.getBean(name);
                         Method currentBeanMethod = bean.getClass().getMethod(method.getName(), method.getParameterTypes());
                         currentBeanMethod.invoke(bean);
