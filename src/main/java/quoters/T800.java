@@ -20,6 +20,10 @@ public class T800 implements Quoter {
 
     private String message;
 
+    public void setRepeat(int repeat) {
+        this.repeat = repeat;
+    }
+
     public void setMessage(String message) {
         this.message = message;
     }

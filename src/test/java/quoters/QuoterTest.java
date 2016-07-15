@@ -4,6 +4,7 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import quoters.applicationcontext.PropertyFileApplicationContext;
 
 /**
  * Created by rpadalka on 29.05.16.
@@ -33,8 +34,11 @@ public class QuoterTest extends TestCase {
         System.out.println("PostProxy annotation. ContextRefreshedEvent. END\n");
 
         for (int i = 0; i < 10; i++) {
-            Thread.sleep(10000);
+            Thread.sleep(1000);
             applicationContext.getBean(Quoter.class).sayQuote();
         }
+
+        PropertyFileApplicationContext propertyContext = new PropertyFileApplicationContext("context.properties");
+        propertyContext.getBean(Quoter.class).sayQuote();
     }
 }
